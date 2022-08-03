@@ -1,4 +1,5 @@
 open Dna_to_rna
+open Acronym
 
 let _ = to_rna [ `A ]
-let () = print_endline "Hello, World!"
+let _ = acronym ""

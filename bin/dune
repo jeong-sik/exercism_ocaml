@@ -1,4 +1,4 @@
 (executable
  (public_name exercism_ocaml)
  (name main)
- (libraries exercism_ocaml))
+ (libraries base str exercism_ocaml))
