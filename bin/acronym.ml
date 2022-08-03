@@ -10,10 +10,6 @@ let removeUnusedChar x =
   | false -> upper
 
 let acronym i =
-  let str =
-    Base.String.Search_pattern.replace_all
-      (Base.String.Search_pattern.create "-")
-      ~in_:i ~with_:" "
-  in
-  str |> Base.String.split ~on:' ' |> List.map removeUnusedChar
-  |> String.concat ""
+  i
+  |> Base.String.split_on_chars ~on:[ ' '; '-'; '_' ]
+  |> List.map removeUnusedChar |> String.concat ""
